@@ -1,0 +1,917 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Audiowide&family=Barlow&family=Jockey+One&family=Montserrat&family=PT+Sans&family=Poppins&family=Roboto&family=Vina+Sans&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #222;
+  overflow-x: hidden;
+}
+
+.hero {
+  width: 100vw;
+  height: 75vh;
+  background-image: linear-gradient(rgba(3, 3, 3, 0.4), rgba(3, 3, 3, 0.4));
+  position: relative;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 30px 2px rgb(4, 4, 4);
+}
+
+#navbar {
+  background: transparent;
+  position: fixed;
+  z-index: 9999;
+  width: 100vw;
+  border-color: hsla(0, 0%, 100%, 0.2);
+  transition: background-color 0.7s ease-in-out;
+}
+
+#navbar.scrolled {
+  background-color: #121212;
+}
+
+#logo {
+  color: #00ff93;
+  font-family: 'Audiowide';
+}
+
+#ulel {
+  font-family: 'Barlow';
+}
+
+#ulel li:hover {
+  color: #00ff93;
+  border-color: #00ff93;
+}
+
+#line {
+  width: 1px;
+  height: 560vh;
+  position: absolute;
+  background: hsla(155, 100%, 50%, 0.466);
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 90vw;
+}
+
+#triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 16px solid transparent;
+  border-left: 32px solid #00FF93;
+  border-bottom: 16px solid transparent;
+  margin-right: 87.65vw;
+  margin-top: 24vh;
+  position: absolute;
+}
+
+#box {
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  background: #00FF93;
+  margin-top: 80vh;
+}
+
+#box2 {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #00FF93;
+  margin-top: 88vh;
+  margin-left: -10px;
+}
+
+#box3 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #00FF93;
+  margin-top: 143vh;
+}
+
+#box7 {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #00FF93;
+  margin-top: 216vh;
+}
+
+#box5 {
+  position: absolute;
+  width: 20px;
+  height: 15px;
+  background: #00FF93;
+  margin-top: 226vh;
+  margin-left: -20px;
+}
+
+#box6 {
+  width: 70px;
+  height: 40px;
+  background: #00FF93;
+  position: absolute;
+  margin-top: 238vh;
+  box-shadow: 0 4px 27px 2px rgba(4, 4, 4, 0.658);
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: 0; bottom: 0; width: 0; height: 0;
+    border-left: 5px solid #00FF93;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid #00FF93;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+  }
+}
+
+#box4 {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #00FF93;
+  margin-top: 155vh;
+}
+
+#box15 {
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  background: #00FF93;
+  margin-top: 294vh;
+}
+
+#box8 {
+  position: absolute;
+  width: 15px;
+  height: 10px;
+  background: #00FF93;
+  margin-top: 480vh;
+}
+
+#box9 {
+  position: absolute;
+  width: 25px;
+  height: 20px;
+  background: #00FF93;
+  margin-top: 490vh;
+}
+
+
+.mains {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 3rem;
+  padding-right: 10rem;
+  padding-left: 10rem;
+  border-left: 1px solid #fdfeff;
+  border-color: hsla(0, 0%, 100%, 0.2);
+  z-index: 0;
+}
+
+.mains h1 {
+  color: rgba(255, 255, 255, 0.959);
+  font-family: 'Audiowide';
+}
+
+.video {
+  object-fit: cover;
+  position: absolute;
+  z-index: -10;
+  width: 100vw;
+  height: 75vh;
+  overflow-x: hidden;
+}
+
+.another {
+  height: 10vh;
+  width: 100vw;
+}
+
+.main {
+  width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  padding: 120px 24px 160px 24px;
+  pointer-events: none;
+}
+
+.main:before {
+  background: #222;
+  position: absolute;
+  content: "";
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.main:after {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  filter: invert(1);
+}
+
+
+.button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background: none;
+  color: #0f1923;
+  cursor: pointer;
+  position: relative;
+  padding: 8px;
+  margin-bottom: -20px;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 25px;
+  transition: all .15s ease;
+  font-family: 'Jockey One';
+  letter-spacing: 4px;
+  font-weight: 500;
+}
+
+.button::before,
+.button::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: calc(50% - 5px);
+  border: 1px solid #fdfeff;
+  transition: all .15s ease;
+}
+
+.button::before {
+  top: 0;
+  border-bottom-width: 0;
+}
+
+.button::after {
+  bottom: 0;
+  border-top-width: 0;
+}
+
+.button:active,
+.button:focus {
+  outline: none;
+}
+
+.button:active::before,
+.button:active::after {
+  right: 3px;
+  left: 3px;
+}
+
+.button:active::before {
+  top: 3px;
+}
+
+.button:active::after {
+  bottom: 3px;
+}
+
+.button_lg {
+  position: relative;
+  display: block;
+  padding: 10px 20px;
+  color: #fdfeff;
+  background-color: #fdfeff;
+  background: #222;
+  border: 2px;
+  border-color: #fdfeff;
+  overflow: hidden;
+  box-shadow: inset 0px 0px 0px 1px transparent;
+}
+
+.button_lg::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: px;
+  height: px;
+  background-color: #0f1923;
+  border: 2px;
+  border-color: #fdfeff;
+}
+
+.button_lg::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  background-color: #b0bcc9;
+  transition: all .2s ease;
+  border: 2px;
+  border-color: #fdfeff;
+}
+
+.button_sl {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: -1px;
+  left: -8px;
+  width: 0;
+  background-color: #00FF93;
+  transform: skew(-15deg);
+  transition: all .2s ease;
+}
+
+.button_text {
+  position: relative;
+  border-color: #fdfeff;
+  border: 2px;
+}
+
+.button:hover {
+  color: #0f1923;
+}
+
+.button:hover .button_sl {
+  width: calc(100% + 15px);
+}
+
+.button:hover .button_lg::after {
+  background-color: #fff;
+}
+
+#games-section {
+  position: relative;
+}
+
+.arrow-pointer {
+  width: 150px;
+  height: 30px;
+  background: #00FF93;
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 92vw;
+  box-shadow: 0 4px 27px 2px rgba(4, 4, 4, 0.658);
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0; bottom: 0; width: 0; height: 0;
+    border-right: 5px solid #00FF93;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-right: 15px solid #00FF93;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+  }
+}
+
+.games-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  overflow: hidden;
+  -webkit-text-stroke: 1px #00000070;
+  color: #222;
+  font-size: 350px;
+  font-family: 'Vina Sans';
+  font-weight: 500;
+  line-height: 0.7;
+}
+
+.games-bg2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  overflow: hidden;
+  -webkit-text-stroke: 1px #00000070;
+  color: #222;
+  font-size: 350px;
+  font-family: 'Vina Sans';
+  font-weight: 500;
+  margin-top: 145px;
+  margin-left: 180px;
+}
+
+.games-bg3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  overflow: hidden;
+  -webkit-text-stroke: 1px #00000070;
+  color: #222;
+  font-size: 350px;
+  font-family: 'Vina Sans';
+  font-weight: 500;
+  line-height: 0.7;
+  margin-top: 580px;
+  margin-left: 30px;
+}
+
+.games-bg4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  overflow: hidden;
+  -webkit-text-stroke: 1px #00000070;
+  color: #222;
+  font-size: 350px;
+  font-family: 'Vina Sans';
+  font-weight: 500;
+  margin-top: 730px;
+  margin-left: 480px;
+}
+
+#button2 {
+  align-items: center;
+  background-color: transparent;
+  color: #00FF93;
+  cursor: pointer;
+  display: flex;
+  font-family: 'Anton';
+  text-decoration: none;
+  text-transform: uppercase;
+  outline: 0;
+  border: 0;
+  color: #00FF93;
+  z-index: 99;
+}
+
+#button2:before {
+  background-color: #00FF93;
+  content: "";
+  display: inline-block;
+  height: 2px;
+  margin: 3px;
+  transition: all .42s cubic-bezier(.25,.8,.25,1);
+  width: 0;
+}
+
+#button2:hover:before {
+  background-color: #00FF93;
+  width: 4rem;
+}
+
+#cta svg {
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+  fill: #fff;
+  padding-left: 14px;
+  transition: 0.3s ease-in;
+}
+
+#cta:hover svg {
+  transform: translateX(0);
+  fill: #00FF93;
+}
+
+#cta:active svg {
+  transform: scale(0.9);
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: #00FF93 ;
+  padding-bottom: 3px;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #00ff93;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+#cta:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+#another {
+  width: 100vw;
+  height: 100vh;
+}
+
+.game {
+  margin-top: -30px;
+}
+
+.game-name {
+  font-family: 'Audiowide';
+  color: #00FF93;
+  padding-top: 12px;
+  padding-bottom: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.game-about {
+  font-family: 'Montserrat';
+  color: #ffffffea;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 12px;
+}
+
+.game-cards {
+  background-color: #121212;
+  transition: .5s ease-out;
+  border: 1px solid transparent;
+  overflow: hidden;
+  margin-bottom: 40px;
+  z-index: 0;
+  box-shadow: 0 0 1rem #121212;
+}
+
+.game-cards:hover {
+  border: 1px solid #00FF93;
+  transform: scale(1.02);
+  box-shadow: 0 2px 30px 2px rgb(4, 4, 4);
+}
+
+.game-description {
+  background-color: #121212;
+  z-index: 99;
+  position: relative;
+}
+
+.cta2 svg {
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+  fill: #fff;
+  padding-left: 14px;
+  transition: 0.3s ease-in;
+}
+
+.cta2:hover svg {
+  transform: translateX(0);
+  fill: #00FF93;
+}
+
+.cta2:active svg {
+  transform: scale(0.9);
+}
+
+.hover-underline-animation2 {
+  position: relative;
+  color: #00FF93 ;
+  padding-bottom: 3px;
+}
+
+.hover-underline-animation2:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #00FF93;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.cta2:hover .hover-underline-animation2:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.button3 {
+  align-items: center;
+  background-color: transparent;
+  color: #00FF93;
+  cursor: pointer;
+  display: flex;
+  font-family: 'Audiowide';
+  text-decoration: none;
+  outline: 0;
+  border: 0;
+  color: #00FF93;
+}
+
+.button3:after {
+  background-color: #00FF93;
+  content: "";
+  display: inline-block;
+  height: 2px;
+  margin: 3px;
+  margin-left: 5px;
+  transition: all .42s cubic-bezier(.25,.8,.25,1);
+  width: 0;
+}
+
+.button3:hover:after {
+  background-color: #00FF93;
+  width: 2rem;
+}
+
+#button4 {
+  align-items: center;
+  background-color: transparent;
+  color: #00FF93;
+  cursor: pointer;
+  display: flex;
+  font-family: 'Anton';
+  text-decoration: none;
+  text-transform: uppercase;
+  outline: 0;
+  border: 0;
+  color: #00FF93;
+  z-index: 99;
+  margin-top: -170px;
+  margin-right: 20px;
+}
+
+#button4:before {
+  background-color: #00FF93;
+  content: "";
+  display: inline-block;
+  height: 2px;
+  margin: 3px;
+  transition: all .42s cubic-bezier(.25,.8,.25,1);
+  width: 0;
+}
+
+#button4:hover:before {
+  background-color: #00FF93;
+  width: 4rem;
+}
+
+#parallax {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#parallax-text {
+  position: relative;
+  -webkit-text-stroke: 1px #00ff95ab;
+  color: #222;
+  font-size: 200px;
+  font-family: 'Vina Sans';
+  white-space: nowrap;
+  margin-top: -50px;
+  z-index: 0;
+  margin-left: -5000px;
+}
+
+.about-heading {
+  font-family: 'Audiowide';
+  color: #00FF93;
+}
+
+.box-container {
+  position: relative;
+  z-index: -1;
+}
+
+#box10 {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #00FF93;
+  margin-left: 65vw;
+  margin-bottom: -24vh;
+}
+
+#box11 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #00FF93;
+  margin-left: 58vw;
+  margin-bottom: -30vh;
+}
+
+#box12 {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: #00FF93;
+  margin-left: 70vw;
+  margin-bottom: -30vh;
+}
+
+#box13 {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #00FF93;
+  margin-left: 80vw;
+  margin-bottom: -30vh;
+}
+
+#box14 {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #00FF93;
+  margin-left: 63vw;
+  margin-bottom: -30vh;
+}
+
+.button5 {
+  align-items: center;
+  background-color: transparent;
+  color: #00FF93;
+  cursor: pointer;
+  display: flex;
+  font-family: 'Audiowide';
+  text-decoration: none;
+  outline: 0;
+  border: 0;
+}
+
+.button5:after {
+  background-color: #00FF93;
+  content: "";
+  display: inline-block;
+  height: 5px;
+  margin: 3px;
+  margin-left: 10px;
+  transition: all .42s cubic-bezier(.25,.8,.25,1);
+  width: 0;
+}
+
+.button5:hover:after {
+  background-color: #00FF93;
+  width: 5rem;
+}
+
+.about-content {
+  font-family: 'Montserrat';
+  color: #fdfeff;
+  font-weight: 100;
+  letter-spacing: 0.05rem;
+  line-height: 1.6;
+  width: 65%;
+}
+
+#image-container {
+  position: relative;
+}
+
+#image-1 {
+  position: absolute;
+  width: 20vw;
+  margin-right: 28vw;
+  bottom: -200vh;
+  margin-bottom: -180vh;
+  z-index: -1;
+  box-shadow: 0 0 1rem #121212
+}
+
+#image-2 {
+  position: absolute;
+  width: 30vw;
+  margin-right: 8vw;
+  z-index: -2;
+  box-shadow: 0 0 1rem #121212;
+  bottom: -200vh;
+  margin-bottom: -33vh;
+}
+
+#image-3 {
+  position: absolute;
+  width: 15vw;
+  margin-right: 5vw;
+  box-shadow: 0 0 1rem #121212;
+  margin-bottom: -350vh;
+}
+
+.esports-content {
+  font-family: 'Montserrat';
+  color: #fdfeff;
+  font-weight: 100;
+  letter-spacing: 0.05rem;
+  line-height: 1.6;
+  width: 65%;
+  text-align: end;
+  justify-content: end;
+}
+
+#image-container2 {
+  position: relative;
+}
+
+.button6 {
+  align-items: center;
+  background-color: transparent;
+  color: #00FF93;
+  cursor: pointer;
+  display: flex;
+  font-family: 'Audiowide';
+  text-decoration: none;
+  outline: 0;
+  border: 0;
+}
+
+.button6::before {
+  background-color: #00FF93;
+  content: "";
+  display: inline-block;
+  height: 5px;
+  margin: 3px;
+  margin-right: 10px;
+  transition: all .42s cubic-bezier(.25,.8,.25,1);
+  width: 0;
+}
+
+.button6:hover:before {
+  background-color: #00FF93;
+  width: 5rem;
+}
+
+#image-4 {
+  position: absolute;
+  width: 20vw;
+  margin-left: 28vw;
+  z-index: -1;
+  box-shadow: 0 0 1rem #121212;
+  margin-bottom: -250vh;
+}
+
+#image-5 {
+  position: absolute;
+  width: 30vw;
+  margin-left: 8vw;
+  z-index: -2;
+  box-shadow: 0 0 1rem #121212;
+  margin-bottom: 75vh;
+}
+
+#image-6 {
+  position: absolute;
+  width: 15vw;
+  margin-left: 5vw;
+  box-shadow: 0 0 1rem #121212;
+  margin-bottom: -40vh;
+}
+
+#image-7 {
+  position: absolute;
+  width: 17vw;
+  margin-left: 7vw;
+  z-index: -1;
+  box-shadow: 0 0 1rem #121212;
+  margin-bottom: -143vh;
+}
